@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://banana7.cn</id>
+    <title>Rainbow</title>
+    <updated>2021-01-11T02:20:24.806Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://banana7.cn"/>
+    <link rel="self" href="https://banana7.cn/atom.xml"/>
+    <subtitle>Life &amp; Knowledge</subtitle>
+    <logo>https://banana7.cn/images/avatar.png</logo>
+    <icon>https://banana7.cn/favicon.ico</icon>
+    <rights>All rights reserved 2021, Rainbow</rights>
+    <entry>
+        <title type="html"><![CDATA[群晖Docker内部署iOS推送 Bark-Server]]></title>
+        <id>https://banana7.cn/post/qun-hui-docker-bu-shu-bark-server/</id>
+        <link href="https://banana7.cn/post/qun-hui-docker-bu-shu-bark-server/">
+        </link>
+        <updated>2021-01-08T05:03:22.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群晖Docker内部署 JD-base V3]]></title>
+        <id>https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/</id>
+        <link href="https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/">
+        </link>
+        <updated>2020-12-21T08:45:10.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用Server酱推送群辉通知]]></title>
+        <id>https://banana7.cn/post/shi-yong-server-jiang-tui-song-qun-hui-tong-zhi/</id>
+        <link href="https://banana7.cn/post/shi-yong-server-jiang-tui-song-qun-hui-tong-zhi/">
+        </link>
+        <updated>2020-11-23T06:07:15.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[黑群晖激活套件 Active Backup for Business]]></title>
+        <id>https://banana7.cn/post/hei-qun-hui-ji-huo-tao-jian-active-backup-for-business/</id>
+        <link href="https://banana7.cn/post/hei-qun-hui-ji-huo-tao-jian-active-backup-for-business/">
+        </link>
+        <updated>2020-11-13T01:32:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OrangePi ZeroPlus烧录Armbian作为软AP]]></title>
+        <id>https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/</id>
+        <link href="https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/">
+        </link>
+        <updated>2020-09-27T16:20:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用补丁黑群晖显示真实CPU核心信息]]></title>
+        <id>https://banana7.cn/post/shi-yong-bu-ding-hei-qun-hui-xian-shi-zhen-shi-cpu-he-xin-xin-xi/</id>
+        <link href="https://banana7.cn/post/shi-yong-bu-ding-hei-qun-hui-xian-shi-zhen-shi-cpu-he-xin-xin-xi/">
+        </link>
+        <updated>2020-09-09T08:38:54.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[修复Win10更新2004后“AppxSVC”占用过高]]></title>
+        <id>https://banana7.cn/post/xiu-fu-win10appxsvczhan-yong-guo-gao-xi-tong-qia-si/</id>
+        <link href="https://banana7.cn/post/xiu-fu-win10appxsvczhan-yong-guo-gao-xi-tong-qia-si/">
+        </link>
+        <updated>2020-08-12T15:11:50.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[解锁网易云音乐客户端变灰歌曲]]></title>
+        <id>https://banana7.cn/post/jie-suo-wang-yi-yun-yin-le-ke-hu-duan-bian-hui-ge-qu/</id>
+        <link href="https://banana7.cn/post/jie-suo-wang-yi-yun-yin-le-ke-hu-duan-bian-hui-ge-qu/">
+        </link>
+        <updated>2020-05-28T05:01:18.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOS JailBreak 越狱源/插件[iOS13]]]></title>
+        <id>https://banana7.cn/post/ios124-jailbreakandcydiaanddeb/</id>
+        <link href="https://banana7.cn/post/ios124-jailbreakandcydiaanddeb/">
+        </link>
+        <updated>2020-05-27T13:41:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOS12/3系统进程精简·附脚本]]></title>
+        <id>https://banana7.cn/post/ios12-xi-tong-jin-cheng-jing-jian/</id>
+        <link href="https://banana7.cn/post/ios12-xi-tong-jin-cheng-jing-jian/">
+        </link>
+        <updated>2020-05-27T13:06:19.000Z</updated>
+    </entry>
+</feed>
