@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-01-11T11:20:12.870Z</updated>
+    <updated>2021-01-13T15:12:07.749Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://banana7.cn/images/avatar.png</logo>
     <icon>https://banana7.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Rainbow</rights>
+    <entry>
+        <title type="html"><![CDATA[iOS 13.4.1 Succession 平刷]]></title>
+        <id>https://banana7.cn/post/ios-1341-succession-ping-shua/</id>
+        <link href="https://banana7.cn/post/ios-1341-succession-ping-shua/">
+        </link>
+        <updated>2021-01-13T06:01:39.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[群晖Docker内部署iOS推送 Bark-Server]]></title>
         <id>https://banana7.cn/post/qun-hui-docker-bu-shu-bark-server/</id>
@@ -72,12 +79,5 @@
         <link href="https://banana7.cn/post/ios124-jailbreakandcydiaanddeb/">
         </link>
         <updated>2020-05-27T13:41:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iOS12/3系统进程精简·附脚本]]></title>
-        <id>https://banana7.cn/post/ios12-xi-tong-jin-cheng-jing-jian/</id>
-        <link href="https://banana7.cn/post/ios12-xi-tong-jin-cheng-jing-jian/">
-        </link>
-        <updated>2020-05-27T13:06:19.000Z</updated>
     </entry>
 </feed>
