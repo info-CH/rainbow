@@ -22,7 +22,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1610589782074"/>
+        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1610881784324"/>
 
           <h1 title="Rainbow" class="weaklink"><a href="/">Rainbow</a>
 
@@ -205,20 +205,24 @@
 </ul>
 <h3 id="部署docker">部署docker</h3>
 <ol>
-<li>注册表搜索 - evinedeng；找到<code>evinedeng/jd</code>下载（ ≈207Mb ）</li>
-<li>双击下载好的镜像；进入高级设置；选择卷；添加文件夹</li>
-<li>将下面对应的文件夹装载上；（左为群辉新建文件夹路径；右为装载路径）<pre><code>/docker/jd_base/config =&gt; /jd/config
+<li>
+<p>注册表搜索 - evinedeng；找到<code>evinedeng/jd</code>下载（ ≈207Mb ）</p>
+</li>
+<li>
+<p>双击下载好的镜像；进入高级设置；选择卷；添加文件夹</p>
+</li>
+<li>
+<p>将下面对应的文件夹装载上；（左为群辉新建文件夹路径；右为装载路径）</p>
+<pre><code>/docker/jd_base/config =&gt; /jd/config
 /docker/jd_base/log =&gt; /jd/log
 </code></pre>
 </li>
-</ol>
-<ul>
-<li>2021.01.11更新</li>
-</ul>
-<ol start="4">
-<li>添加控制面板 - 进入高级设置 - 端口设置</li>
-<li>本地/容器端口：5678  ； 类型：tcp</li>
-<li>控制面板：<code>http://&lt;ip&gt;:5678</code></li>
+<li>
+<p>添加控制面板：网络 - 勾选<code>使用与 Docker Hosts 相同的网络</code></p>
+</li>
+<li>
+<p>控制面板：<code>http://&lt;ip&gt;:5678</code></p>
+</li>
 </ol>
 <h3 id="部署完成">部署完成</h3>
 <blockquote>
