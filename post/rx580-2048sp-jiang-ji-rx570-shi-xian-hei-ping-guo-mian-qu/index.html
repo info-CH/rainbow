@@ -22,7 +22,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1610881784324"/>
+        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1611035410222"/>
 
           <h1 title="Rainbow" class="weaklink"><a href="/">Rainbow</a>
 
@@ -194,17 +194,15 @@
 <h3 id="准备软件">准备软件</h3>
 <ul>
 <li>Atiflash</li>
-<li>570ROM /原版备份ROM</li>
 </ul>
 <h3 id="刷入vbios">刷入Vbios</h3>
 <ol>
-<li>CMD</li>
 <li><code>cd Atiflash文件夹路径</code>；</li>
-<li>输入命令；</li>
+<li>依次命令；</li>
 </ol>
 <pre><code>amdvbflash.exe -unlockrom 0 #解锁显卡BIOS
 ROM Unlocked #说明 Bios 解锁成功
-amdvbflash -f -p 0 XXXX.rom #XXXX替换为要输入的ROM名
+amdvbflash -f -p 0 XXXX.rom #XXXX替换为要刷入的ROM名
 Restart System To Complete VBIOS Update #即为完成；重启即可
 </code></pre>
 <figure data-type="image" tabindex="1"><img src="https://banana7.cn/post-images/1600831416236.PNG" alt="" loading="lazy"></figure>

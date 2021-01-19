@@ -22,7 +22,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1610881784324"/>
+        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1611035410222"/>
 
           <h1 title="Rainbow" class="weaklink"><a href="/">Rainbow</a>
 
@@ -188,29 +188,22 @@
 <p>解决办法：追溯根源直接重装商店再进行关闭自动更新<br>
 建议打开系统还原、以避免类似问题发生。重新安装商店的前提就是要么手速够快提前粘贴好准备的代码要么就是先还原解决根源问题再升级</p>
 <hr>
-<h3 id="重装microsoftstore商店">重装MicrosoftStore商店</h3>
-<ol>
-<li>
-<p>删除商店<br>
-打开“Windows Powershell(管理员)”<br>
-输入<code>get-appxpackage *store* | remove-Appxpackage</code></p>
-</li>
-<li>
-<p>获取包名<br>
-输入<code>Get-AppxPackage -allusers | Select Name, PackageFullName | select-string &quot;WindowsStore&quot;</code>；<br>
-注：PackageFullName=<code>包名</code>；复制完整包名</p>
-</li>
-<li>
-<p>重新安装<br>
-输入<code>add-appxpackage -register &quot;C:\Program Files\WindowsApps\包全名\AppxManifest.xml&quot; -disabledevelopmentmode</code><br>
-重启即可打开商店</p>
-</li>
-</ol>
+<h3 id="删除商店">删除商店</h3>
+<p>打开“Windows Powershell(管理员)”</p>
+<pre><code>get-appxpackage *store* | remove-Appxpackage
+</code></pre>
+<h3 id="获取包名">获取包名</h3>
+<pre><code>Get-AppxPackage -allusers | Select Name, PackageFullName | select-string &quot;WindowsStore&quot;
+</code></pre>
+<p>注：PackageFullName=<code>包名</code>；复制完整包名</p>
+<h3 id="重新安装">重新安装</h3>
+<pre><code>add-appxpackage -register &quot;C:\Program Files\WindowsApps\包全名\AppxManifest.xml&quot; -disabledevelopmentmode
+</code></pre>
+<p>重启即可打开商店</p>
 <hr>
 <h3 id="关闭商店自动更新">关闭商店自动更新</h3>
 <p>打开商店设置，关闭自动更新<br>
-<img src="https://banana7.cn/post-images/1600619194270.png" alt="" loading="lazy"><br>
-重启后“AppxSVC”消失，解决占用！</p>
+<img src="https://banana7.cn/post-images/1600619194270.png" alt="" loading="lazy"></p>
 </p>
 
      <p class="md_block">
