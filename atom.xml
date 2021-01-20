@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-01-19T12:48:13.925Z</updated>
+    <updated>2021-01-20T03:33:45.019Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -46,6 +46,13 @@
         <updated>2020-11-13T01:32:53.000Z</updated>
     </entry>
     <entry>
+        <title type="html"><![CDATA[ITX/NAS 配置参考]]></title>
+        <id>https://banana7.cn/post/itx-zan-ji-can-kao/</id>
+        <link href="https://banana7.cn/post/itx-zan-ji-can-kao/">
+        </link>
+        <updated>2020-10-10T07:03:01.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[OrangePi ZeroPlus烧录Armbian作为软AP]]></title>
         <id>https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/</id>
         <link href="https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/">
@@ -72,12 +79,5 @@
         <link href="https://banana7.cn/post/jie-suo-wang-yi-yun-yin-le-ke-hu-duan-bian-hui-ge-qu/">
         </link>
         <updated>2020-05-28T05:01:18.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iOS JailBreak 越狱源/插件推荐[iOS13]]]></title>
-        <id>https://banana7.cn/post/ios124-jailbreakandcydiaanddeb/</id>
-        <link href="https://banana7.cn/post/ios124-jailbreakandcydiaanddeb/">
-        </link>
-        <updated>2020-05-27T13:41:33.000Z</updated>
     </entry>
 </feed>
