@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-02-27T06:08:58.889Z</updated>
+    <updated>2021-03-02T07:06:15.251Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -39,14 +39,7 @@
         <updated>2021-01-08T05:03:22.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关于备份]]></title>
-        <id>https://banana7.cn/post/guan-yu-bei-fen/</id>
-        <link href="https://banana7.cn/post/guan-yu-bei-fen/">
-        </link>
-        <updated>2021-01-06T11:01:39.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群晖Docker内部署 JD-base V3]]></title>
+        <title type="html"><![CDATA[群晖Docker内部署 JD-base V3 【失效】]]></title>
         <id>https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/</id>
         <link href="https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/">
         </link>
@@ -79,5 +72,12 @@
         <link href="https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/">
         </link>
         <updated>2020-09-27T16:20:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用补丁黑群晖显示真实CPU核心信息]]></title>
+        <id>https://banana7.cn/post/shi-yong-bu-ding-hei-qun-hui-xian-shi-zhen-shi-cpu-he-xin-xin-xi/</id>
+        <link href="https://banana7.cn/post/shi-yong-bu-ding-hei-qun-hui-xian-shi-zhen-shi-cpu-he-xin-xin-xi/">
+        </link>
+        <updated>2020-09-09T08:38:54.000Z</updated>
     </entry>
 </feed>
