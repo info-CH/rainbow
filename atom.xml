@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-03-02T08:26:51.432Z</updated>
+    <updated>2021-03-04T05:50:22.225Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -11,11 +11,40 @@
     <icon>https://banana7.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Rainbow</rights>
     <entry>
-        <title type="html"><![CDATA[IE/EDGE/FIREFOX修复Flash]]></title>
-        <id>https://banana7.cn/post/ieedgefirefox-xiu-fu-flash-20210224/</id>
-        <link href="https://banana7.cn/post/ieedgefirefox-xiu-fu-flash-20210224/">
+        <title type="html"><![CDATA[在群晖 Nas 上部署 RSSHub]]></title>
+        <id>https://banana7.cn/post/zai-qun-hui-nas-shang-bu-shu-rsshub/</id>
+        <link href="https://banana7.cn/post/zai-qun-hui-nas-shang-bu-shu-rsshub/">
         </link>
-        <updated>2021-02-24T12:14:20.000Z</updated>
+        <updated>2021-03-04T04:32:35.000Z</updated>
+        <content type="html"><![CDATA[<p>起因；<br>
+各种追番在不同平台 更新有周三周五周六周日的 追番太麻烦了。<br>
+后来就有了现在的RSS；既然有家用Nas那就直接在上面跑咯~</p>
+<ul>
+<li>RSSHub DockerHub<br>
+<a href="https://registry.hub.docker.com/r/diygod/rsshub/">https://registry.hub.docker.com/r/diygod/rsshub</a></li>
+<li>RSSHub Docs<br>
+<a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></li>
+<li>Sunny-Ngrok穿透<br>
+<a href="https://www.ngrok.cc/">https://www.ngrok.cc/</a></li>
+</ul>
+<h3 id="部署rsshub">部署RSSHub</h3>
+<ol>
+<li>注册表搜索 <code>rsshub</code> 下载，安装映像</li>
+<li>高级设置 - 网络 ；勾选 <code>使用与Docker Host相同的网络</code></li>
+<li>http://[iP]:1200  =&gt;  <code>Welcome to RSSHub!✨</code></li>
+</ol>
+<h3 id="内网穿透">内网穿透</h3>
+<ul>
+<li>iPv6公网 - 域名直接解析[✔]</li>
+<li>iPv4内网 - Sunny Ngrok穿透[✔]</li>
+</ul>
+<ol>
+<li>开通隧道 <code>美国Ngrok免费服务器</code></li>
+<li>修改隧道本地端口：[iP]:1200</li>
+<li>下载Ngrok客户端：<a href="https://www.ngrok.cc/download.html">https://www.ngrok.cc/download.html</a></li>
+<li>启动隧道：setsid ./sunny clientid 隧道ID &amp;</li>
+</ol>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Chrome Optimization]]></title>
@@ -23,6 +52,20 @@
         <link href="https://banana7.cn/post/chrome/">
         </link>
         <updated>2021-01-21T05:26:00.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>恢复地址栏中隐藏的URL连接HTTP、HTTPS及WWW前缀方法<br>
+v86 版本开始，只需地址栏右键-&gt;选择-&gt;总是显示完整网址即可<br>
+<br></li>
+<li>开始安全DNS功能<br>
+现在设置 – 隐身设置和安全性-高级-使用安全DNS<br>
+<br></li>
+<li>开启拦截高负载广告功能<br>
+chrome://flags/#enable-heavy-ad-intervention //改为Enabled开启<br>
+<br></li>
+<li>开启多线程下载功能（Parallel downloading）<br>
+chrome://flags/#enable-parallel-downloading //改为Enabled开启</li>
+</ul>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[iOS 13.4.1 Succession 平刷]]></title>
@@ -30,20 +73,133 @@
         <link href="https://banana7.cn/post/ios-1341-succession-ping-shua/">
         </link>
         <updated>2021-01-13T06:01:39.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="环境">环境</h3>
+<ul>
+<li>iPhoneSE2</li>
+<li>iOS 13.4.1</li>
+<li>unc0ver5.3.1</li>
+</ul>
+<h3 id="工具地址">工具地址</h3>
+<ul>
+<li>Succession 作者源<br>
+<a href="https://samgisaninja.github.io/beta">https://samgisaninja.github.io/beta</a></li>
+<li>IPSW 固件下载<br>
+<a href="https://ipsw.me">https://ipsw.me</a></li>
+</ul>
+<h3 id="注意事项">注意事项</h3>
+<ol>
+<li>平刷会清空所有数据，注意数据备份！</li>
+<li>备份软件建议使用爱思/iMazing进行单独备份；不要全备份！！恢复会把越狱的残留恢复进去！</li>
+<li>平刷只限制于同版本号操作；即13.4.1只能刷13.4.1不可往上向下互刷！</li>
+</ol>
+<h3 id="平刷操作">平刷操作</h3>
+<ol>
+<li>ipsw 下载固件命名为 <code>ipsw.ipsw</code></li>
+<li>Cydia 安装 Succession</li>
+<li>打开 Succession，弹窗选择 <code>Not now</code></li>
+<li>爱思或者 Filza 将 ipsw.ipsw 导入到 <code>/var/mobile/Media/Succession</code></li>
+<li>回到 Succession ；点击底部 <code>Download clean filesystem</code></li>
+<li>选择 <code>Use provided IPSW</code>；系统走进度条准备固件</li>
+<li>弹窗提示 Download Complete 选择 <code>Back</code></li>
+<li>再点击底部红色 <code>Prepare for restore!</code>;跳转后点击 <code>Erase iPhone</code> - <code>Begin restore</code></li>
+<li>等待进度条走完重启！</li>
+</ol>
+<blockquote>
+<p>平刷期间注意电量充足，系统自动息屏~尽量不动你的iPhone</p>
+</blockquote>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[群晖Docker内部署iOS推送 Bark-Server]]></title>
+        <title type="html"><![CDATA[在群晖 Nas 上部署 Bark 推送]]></title>
         <id>https://banana7.cn/post/qun-hui-docker-bu-shu-bark-server/</id>
         <link href="https://banana7.cn/post/qun-hui-docker-bu-shu-bark-server/">
         </link>
         <updated>2021-01-08T05:03:22.000Z</updated>
+        <content type="html"><![CDATA[<p>在自己的黑裙晖Nas上部署Bark-Server推送，利用公网 iPv6 推送（又何尝不想拥有公网iPv4呢？😅）</p>
+<h3 id="项目地址">项目地址</h3>
+<ul>
+<li>Github项目地址：<br>
+<a href="https://github.com/Finb/bark-server">https://github.com/Finb/bark-server</a></li>
+<li>Bark-Chrome-Extension - Chrome插件 推送url自动复制：<br>
+<a href="https://chrome.google.com/webstore/detail/bark/pmlkbdbpglkgbgopghdcmohdcmladeii">https://chrome.google.com/webstore/detail/bark/pmlkbdbpglkgbgopghdcmohdcmladeii</a></li>
+<li>iOS Bark - AppStore：<br>
+<a href="https://apps.apple.com/cn/app/bark-customed-notifications/id1403753865">https://apps.apple.com/cn/app/bark-customed-notifications/id1403753865</a><br>
+<br></li>
+</ul>
+<h3 id="docker部署">Docker部署</h3>
+<ol>
+<li>注册表搜索<code>bark-server</code>，双击下载映像默认latest</li>
+<li>进入高级设置 - 卷 - 添加文件夹 - 装载路径：<code>/data</code></li>
+<li>端口设置 - 本地端口 - 自动修改为<code>8080</code>（自定）- 应用！<br>
+<br></li>
+</ol>
+<h3 id="chrome插件设置">Chrome插件设置</h3>
+<ol>
+<li>右击插件图标 - 选项 - New device push URL</li>
+<li>填写设备url（https://xxx.xx:8080/key/）<br>
+<br></li>
+</ol>
+<h3 id="ios设置">iOS设置</h3>
+<ol>
+<li>打开APP，注册设备允许推送</li>
+<li>添加地址：https://xxx.xx:8080</li>
+<li>复制推送url（https://xxx.xx:8080/key/）；粘贴到Chrome插件内</li>
+</ol>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[群晖Docker内部署 JD-base V3 【失效】]]></title>
+        <title type="html"><![CDATA[在群晖 Nas 上部署 JD-base V3 【失效】]]></title>
         <id>https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/</id>
         <link href="https://banana7.cn/post/qun-hui-docker-bu-shu-jd-base-v3/">
         </link>
         <updated>2020-12-21T08:45:10.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="项目地址">项目地址</h3>
+<ul>
+<li>Github项目地址<br>
+<a href="https://github.com/EvineDeng/jd-base">https://github.com/EvineDeng/jd-base</a></li>
+<li>config.sh.sample<br>
+<a href="https://gitee.com/evine/jd-base/raw/v3/sample/config.sh.sample">https://gitee.com/evine/jd-base/raw/v3/sample/config.sh.sample</a></li>
+<li>docker.list.sample<br>
+<a href="https://gitee.com/evine/jd-base/raw/v3/sample/docker.list.sample">https://gitee.com/evine/jd-base/raw/v3/sample/docker.list.sample</a></li>
+</ul>
+<h3 id="新建容器文件夹">新建容器文件夹</h3>
+<ol>
+<li>进入File Station/docker目录下新建<code>jd_base</code>文件夹</li>
+<li>新建log、config文件夹</li>
+<li>下载仓库的 sample/config.sh.sample - 保存到 config 文件夹下，并命名 <code>config.sh</code>（必须）</li>
+<li>下载仓库的 sample/docker.list.sample - 保存到 config 文件夹下，并命名 <code>crontab.list</code>（必须）</li>
+</ol>
+<h3 id="修改配置文件">修改配置文件</h3>
+<ul>
+<li>config.sh 根据使用情况修改配置文件<br>
+使用文本编辑器编辑；（套件中心搜索文本编辑器）</li>
+</ul>
+<h3 id="部署docker">部署docker</h3>
+<ol>
+<li>
+<p>注册表搜索 - evinedeng；找到<code>evinedeng/jd</code>下载（ ≈207Mb ）</p>
+</li>
+<li>
+<p>双击下载好的镜像；进入高级设置；选择卷；添加文件夹</p>
+</li>
+<li>
+<p>将下面对应的文件夹装载上；（左为群辉新建文件夹路径；右为装载路径）</p>
+<pre><code>/docker/jd_base/config =&gt; /jd/config
+/docker/jd_base/log =&gt; /jd/log
+</code></pre>
+</li>
+<li>
+<p>添加控制面板：网络 - 勾选<code>使用与 Docker Hosts 相同的网络</code></p>
+</li>
+<li>
+<p>控制面板：<code>http://&lt;ip&gt;:5678</code></p>
+</li>
+</ol>
+<h3 id="部署完成">部署完成</h3>
+<blockquote>
+<p>配合watchtower可以自动更新容器！</p>
+</blockquote>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用Server酱推送群辉通知]]></title>
@@ -51,6 +207,33 @@
         <link href="https://banana7.cn/post/shi-yong-server-jiang-tui-song-qun-hui-tong-zhi/">
         </link>
         <updated>2020-11-23T06:07:15.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="准备工作">准备工作</h3>
+<ul>
+<li><a href="http://sc.ftqq.com/3.version">Server酱</a></li>
+<li>黑白群晖</li>
+</ul>
+<h3 id="配置server酱">配置Server酱</h3>
+<ol>
+<li>Github登录，点击发送消息</li>
+<li>获取推送URL<br>
+<code>https://sc.ftqq.com/SCUXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.send</code></li>
+<li>修改推送URL；将<code>?text=text&amp;desp=hello world&amp;number=null</code>添加到<code>send</code>后面！</li>
+</ol>
+<h3 id="配置群辉">配置群辉</h3>
+<ol>
+<li>控制面板 - 通知设置 - 短信</li>
+<li>勾选“短信”中的“启用短信通知”，选择“新增短信服务提供商”</li>
+<li>新增窗口中添加“Server酱”以及测试网址，测试网址填写修改好的推送URL</li>
+<li>HTTP方法-GET；HTTP请求标题为空</li>
+<li>修改对应参数<pre><code>text=test； =&gt;  发件人
+desp=hello world:  =&gt;  短信内容
+number=null:  =&gt;  电话号码
+</code></pre>
+</li>
+<li>配置完成后保存，在“短信”中填写“发件人”和“主要电话号码”电话号码随意写；</li>
+<li>最后测试发送；方糖推送通知成功</li>
+</ol>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[黑群晖激活套件 Active Backup for Business]]></title>
@@ -58,6 +241,29 @@
         <link href="https://banana7.cn/post/hei-qun-hui-ji-huo-tao-jian-active-backup-for-business/">
         </link>
         <updated>2020-11-13T01:32:53.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="安装套件">安装套件</h3>
+<p>套件中心-备份-Active Backup for Business<br>
+<br></p>
+<h3 id="激活">激活</h3>
+<ol>
+<li>
+<p>控制面板-信息中心-产品序列号-copy</p>
+</li>
+<li>
+<p>依次输入命令</p>
+</li>
+</ol>
+<pre><code>http://群辉IP:5000/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=登陆用户名&amp;passwd=登陆密码
+</code></pre>
+<p>回车-提示 <code>{&quot;success&quot;:true}</code>即为成功</p>
+<ol start="3">
+<li>然后输入：</li>
+</ol>
+<pre><code>http://群晖IP:5000/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number=&quot;序列号&quot;
+</code></pre>
+<p>回车-提示 <code>{&quot;data&quot;:{&quot;activated&quot;:true},&quot;success&quot;:true}</code>即为成功</p>
+<figure data-type="image" tabindex="1"><img src="https://banana7.cn/post-images/1605231695579.png" alt="" loading="lazy"></figure>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[ITX/NAS 配置参考]]></title>
@@ -65,6 +271,120 @@
         <link href="https://banana7.cn/post/itx-zan-ji-can-kao/">
         </link>
         <updated>2020-10-10T07:03:01.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="itx-65l">※ITX 6.5L</h3>
+<p>原文参考：<a href="https://post.smzdm.com/p/awx4p4pg/">【极硬件壹册】5000元捡一台跑分60W的ITX主机，这可能是30系显卡溢价时的最佳方案</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">配件</th>
+<th style="text-align:center">型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">主板</td>
+<td style="text-align:center">MSI B450I AC</td>
+</tr>
+<tr>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">3600X</td>
+</tr>
+<tr>
+<td style="text-align:center">显卡</td>
+<td style="text-align:center">ROG STRIX 5700XT O8G</td>
+</tr>
+<tr>
+<td style="text-align:center">机箱</td>
+<td style="text-align:center">SGPC K55</td>
+</tr>
+<tr>
+<td style="text-align:center">电源</td>
+<td style="text-align:center">MS450</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://banana7.cn/post-images/1602313769018.jpg" alt="" loading="lazy"><br>
+<img src="https://banana7.cn/post-images/1602313786069.png" alt="" loading="lazy"></p>
+<br>
+<hr>
+<br>
+<h3 id="itx-34l">※ITX 3.4L</h3>
+<p>原文参考：<a href="https://post.smzdm.com/p/ar0nel2z/">3000元便携3.4升itx攒机初体验</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">配件</th>
+<th style="text-align:center">型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">主板</td>
+<td style="text-align:center">华擎A520m-itx</td>
+</tr>
+<tr>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">R5 PRO 4650G</td>
+</tr>
+<tr>
+<td style="text-align:center">机箱</td>
+<td style="text-align:center">SKTC A01</td>
+</tr>
+<tr>
+<td style="text-align:center">散热</td>
+<td style="text-align:center">利民AXP-90I</td>
+</tr>
+<tr>
+<td style="text-align:center">电源</td>
+<td style="text-align:center">机箱配套150W</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://banana7.cn/post-images/1602314854638.jpg" alt="" loading="lazy"><br>
+<img src="https://banana7.cn/post-images/1602314858841.jpg" alt="" loading="lazy"></p>
+<br>
+<hr>
+<br>
+<h3 id="nas-8100-1">※Nas 8100 ①</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">配件</th>
+<th style="text-align:center">型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">i3-8100</td>
+</tr>
+<tr>
+<td style="text-align:center">主板</td>
+<td style="text-align:center">华擎 H310CM-ITX/ac</td>
+</tr>
+<tr>
+<td style="text-align:center">内存</td>
+<td style="text-align:center">DDR4 2666*16G/1</td>
+</tr>
+<tr>
+<td style="text-align:center">散热</td>
+<td style="text-align:center">AVC 超薄风扇</td>
+</tr>
+<tr>
+<td style="text-align:center">电源</td>
+<td style="text-align:center">益衡7025B/全汉FS270-60LE</td>
+</tr>
+<tr>
+<td style="text-align:center">机箱</td>
+<td style="text-align:center">hy/恒煜 4盘位NAS机箱</td>
+</tr>
+<tr>
+<td style="text-align:center">功耗</td>
+<td style="text-align:center">预计37W</td>
+</tr>
+</tbody>
+</table>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[OrangePi ZeroPlus烧录Armbian作为软AP]]></title>
@@ -72,6 +392,58 @@
         <link href="https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/">
         </link>
         <updated>2020-09-27T16:20:02.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="前期准备">前期准备</h3>
+<ul>
+<li><a href="https://www.armbian.com/orange-pi-zero-plus/">Armbian官网</a>下载固件</li>
+<li>Etcher烧录</li>
+<li>TF卡</li>
+</ul>
+<h3 id="烧录armbian">烧录armbian</h3>
+<ol>
+<li>下载armbian固件，使用Etcher烧录</li>
+<li>烧录过程：打开Etcher - 选择固件 - 选择TF卡 - 开始烧录</li>
+<li>烧录完成后，先插卡以及网线最后插电；确保Pi能正常引导</li>
+</ol>
+<h3 id="设置armbian">设置armbian</h3>
+<ol>
+<li>进入路由器查看Pi的ip</li>
+<li>ssh连接Pi；初始账号密码：root / 1234</li>
+<li>初次登录会提示更换新密码，以及新建账户/设置时区</li>
+</ol>
+<h3 id="更换国内源">更换国内源</h3>
+<ol>
+<li>root登录<code>sudo -i</code> 输入密码</li>
+<li>更换国内清华源<code>nano /etc/apt/sources.list</code></li>
+<li>把列表里面的deb开头用#注释掉，然后再添加进去以下的清华源地址</li>
+</ol>
+<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
+</code></pre>
+<p><img src="https://banana7.cn/post-images/1601257028718.png" alt="" loading="lazy"><br>
+4. <code>Ctrl+O</code> 保存 =&gt; <code>Enter</code> 确认  =&gt;  <code>Ctrl+X</code> 退出<br>
+5. 更新：<code>sudo apt-get update</code> =&gt; <code>sudo apt-get upgrade</code></p>
+<h3 id="设置热点">▎设置热点</h3>
+<ol>
+<li>进入armbian菜单 <code>armbian-config</code></li>
+<li>按键盘上下左右设置；选择<code>Network</code><br>
+<img src="https://banana7.cn/post-images/1602122571235.png" alt="" loading="lazy"></li>
+<li>再选择<code>Hotspot</code>；初次进入走下载进度条；完成后选择<code>eth0</code>；并非wlan0<br>
+<img src="https://banana7.cn/post-images/1602122583960.png" alt="" loading="lazy"></li>
+<li>选择<code>Edit</code> - <code>Basic</code>设置热点昵称以及密码；<br>
+<img src="https://banana7.cn/post-images/1602122624967.png" alt="" loading="lazy"><br>
+<img src="https://banana7.cn/post-images/1602122631482.png" alt="" loading="lazy"></li>
+<li>开启热点后是每次开机自动开启的，不用设置开启自启了</li>
+</ol>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用补丁黑群晖显示真实CPU核心信息]]></title>
@@ -79,5 +451,32 @@
         <link href="https://banana7.cn/post/shi-yong-bu-ding-hei-qun-hui-xian-shi-zhen-shi-cpu-he-xin-xin-xi/">
         </link>
         <updated>2020-09-09T08:38:54.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="执行补丁">执行补丁</h3>
+<ol>
+<li>
+<p>下载补丁“<a href="https://cloud.189.cn/t/v2myuq2YF3mi">ch_cpuinfo</a>”</p>
+</li>
+<li>
+<p>Copy /docker</p>
+</li>
+<li>
+<p>ssh：</p>
+<pre><code>cd /volume1/docker
+./ch_cpuinfo
+</code></pre>
+</li>
+<li>
+<p>按照提示输入<code>1</code>，再确认<code>y</code></p>
+</li>
+<li>
+<p>重新登录.</p>
+</li>
+</ol>
+<h3 id="效果图">效果图</h3>
+<figure data-type="image" tabindex="1"><img src="https://banana7.cn/post-images/1600619120947.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>（访问码：1rph）</p>
+</blockquote>
+]]></content>
     </entry>
 </feed>

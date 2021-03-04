@@ -6,7 +6,7 @@
         <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
-    <title>黑群晖激活套件 Active Backup for Business | Rainbow</title>
+    <title>在群晖 Nas 上部署 RSSHub | Rainbow</title>
 <link href="https://banana7.cn/styles/main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/jquery.js"></script>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/basic.js"></script>
@@ -147,7 +147,7 @@
 
 <div class="post">
   <div class="post_title sm_margin">
-    <h2><a>黑群晖激活套件 Active Backup for Business</a>
+    <h2><a>在群晖 Nas 上部署 RSSHub</a>
 
 
 
@@ -156,7 +156,7 @@
 
   <div class="post_details">
     <div class="info"><i class="fa fa-clock-o"></i>
-<span class="date_info">2020-11-13</span>
+<span class="date_info">2021-03-04</span>
 <i class="fa fa-eye"></i>
 
 <span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
@@ -165,10 +165,6 @@
 <i class="fa fa-bookmark-o"></i>
 <span class="tags_info weaklink">
 	
-	<a href="https://banana7.cn/tag/3WSLxl9LR/" class="tag">黑群晖</a>
-
-	<a href="https://banana7.cn/tag/Zlrgw2c7jj/" class="tag">经验</a>
-
 
 </span>
 
@@ -182,28 +178,34 @@
 
 
   <div class="post_content markdown"><p class="md_block">
-    <span class="md_line md_line_start md_line_end"><h3 id="安装套件">安装套件</h3>
-<p>套件中心-备份-Active Backup for Business<br>
-<br></p>
-<h3 id="激活">激活</h3>
+    <span class="md_line md_line_start md_line_end"><p>起因；<br>
+各种追番在不同平台 更新有周三周五周六周日的 追番太麻烦了。<br>
+后来就有了现在的RSS；既然有家用Nas那就直接在上面跑咯~</p>
+<ul>
+<li>RSSHub DockerHub<br>
+<a href="https://registry.hub.docker.com/r/diygod/rsshub/">https://registry.hub.docker.com/r/diygod/rsshub</a></li>
+<li>RSSHub Docs<br>
+<a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></li>
+<li>Sunny-Ngrok穿透<br>
+<a href="https://www.ngrok.cc/">https://www.ngrok.cc/</a></li>
+</ul>
+<h3 id="部署rsshub">部署RSSHub</h3>
 <ol>
-<li>
-<p>控制面板-信息中心-产品序列号-copy</p>
-</li>
-<li>
-<p>依次输入命令</p>
-</li>
+<li>注册表搜索 <code>rsshub</code> 下载，安装映像</li>
+<li>高级设置 - 网络 ；勾选 <code>使用与Docker Host相同的网络</code></li>
+<li>http://[iP]:1200  =&gt;  <code>Welcome to RSSHub!✨</code></li>
 </ol>
-<pre><code>http://群辉IP:5000/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=登陆用户名&amp;passwd=登陆密码
-</code></pre>
-<p>回车-提示 <code>{&quot;success&quot;:true}</code>即为成功</p>
-<ol start="3">
-<li>然后输入：</li>
+<h3 id="内网穿透">内网穿透</h3>
+<ul>
+<li>iPv6公网 - 域名直接解析[✔]</li>
+<li>iPv4内网 - Sunny Ngrok穿透[✔]</li>
+</ul>
+<ol>
+<li>开通隧道 <code>美国Ngrok免费服务器</code></li>
+<li>修改隧道本地端口：[iP]:1200</li>
+<li>下载Ngrok客户端：<a href="https://www.ngrok.cc/download.html">https://www.ngrok.cc/download.html</a></li>
+<li>启动隧道：setsid ./sunny clientid 隧道ID &amp;</li>
 </ol>
-<pre><code>http://群晖IP:5000/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number=&quot;序列号&quot;
-</code></pre>
-<p>回车-提示 <code>{&quot;data&quot;:{&quot;activated&quot;:true},&quot;success&quot;:true}</code>即为成功</p>
-<figure data-type="image" tabindex="1"><img src="https://banana7.cn/post-images/1605231695579.png" alt="" loading="lazy"></figure>
 </p>
 
      <p class="md_block">
