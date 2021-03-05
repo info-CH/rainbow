@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-03-04T05:51:02.697Z</updated>
+    <updated>2021-03-05T02:57:09.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -26,6 +26,8 @@
 <a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></li>
 <li>Sunny-Ngrok穿透<br>
 <a href="https://www.ngrok.cc/">https://www.ngrok.cc/</a></li>
+<li>RSSBu‪d‬ - AppleStore<br>
+<a href="https://apps.apple.com/cn/app/rssbud/id1531443645?ign-itsct=apps_box&amp;ign-itscg=30200">https://apps.apple.com/cn/app/rssbud/id1531443645?ign-itsct=apps_box&amp;ign-itscg=30200</a></li>
 </ul>
 <h3 id="部署rsshub">部署RSSHub</h3>
 <ol>
@@ -44,6 +46,16 @@
 <li>下载Ngrok客户端：<a href="https://www.ngrok.cc/download.html">https://www.ngrok.cc/download.html</a></li>
 <li>启动隧道：setsid ./sunny clientid 隧道ID &amp;</li>
 </ol>
+<h3 id="rss-app">RSS App</h3>
+<p>部署RSSHub完后，当然还需要一个阅读器。<br>
+然后还有搭配的RSSBud。很遗憾的是安装系统最低为iOS14。、<br>
+如果你是iOS14那么RSSBud应该是个不错的选择！</p>
+<p>随后，发现了ssRSS！<br>
+已知问题：</p>
+<ul>
+<li>分组不能修改名称/顺序</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://banana7.cn/post-images/1614911743333.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
