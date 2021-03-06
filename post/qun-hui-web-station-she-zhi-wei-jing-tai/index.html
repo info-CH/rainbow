@@ -6,7 +6,7 @@
         <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
-    <title>iOS 13.4.1 Succession 平刷 | Rainbow</title>
+    <title>群晖 Web Station 设置伪静态 | Rainbow</title>
 <link href="https://banana7.cn/styles/main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/jquery.js"></script>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/basic.js"></script>
@@ -147,7 +147,7 @@
 
 <div class="post">
   <div class="post_title sm_margin">
-    <h2><a>iOS 13.4.1 Succession 平刷</a>
+    <h2><a>群晖 Web Station 设置伪静态</a>
 
 
 
@@ -156,7 +156,7 @@
 
   <div class="post_details">
     <div class="info"><i class="fa fa-clock-o"></i>
-<span class="date_info">2021-01-13</span>
+<span class="date_info">2021-03-06</span>
 <i class="fa fa-eye"></i>
 
 <span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
@@ -165,8 +165,6 @@
 <i class="fa fa-bookmark-o"></i>
 <span class="tags_info weaklink">
 	
-	<a href="https://banana7.cn/tag/rgARBNakO/" class="tag">iOS</a>
-
 
 </span>
 
@@ -180,40 +178,31 @@
 
 
   <div class="post_content markdown"><p class="md_block">
-    <span class="md_line md_line_start md_line_end"><h3 id="环境">环境</h3>
-<ul>
-<li>iPhoneSE2</li>
-<li>iOS 13.4.1</li>
-<li>unc0ver5.3.1</li>
-</ul>
-<h3 id="工具地址">工具地址</h3>
-<ul>
-<li>Succession 作者源<br>
-<a href="https://samgisaninja.github.io/beta">https://samgisaninja.github.io/beta</a></li>
-<li>IPSW 固件下载<br>
-<a href="https://ipsw.me">https://ipsw.me</a></li>
-</ul>
-<h3 id="注意事项">注意事项</h3>
+    <span class="md_line md_line_start md_line_end"><h3 id="设置伪静态">设置伪静态</h3>
 <ol>
-<li>平刷会清空所有数据，注意数据备份！</li>
-<li>备份软件建议使用爱思/iMazing进行单独备份；不要全备份！！恢复会把越狱的残留恢复进去！</li>
-<li>平刷只限制于同版本号操作；即13.4.1只能刷13.4.1不可往上向下互刷！</li>
+<li>ssh 登录群晖</li>
+<li>执行 <code>cat /etc/nginx/app.d/server.webstation-vhost.conf</code></li>
+<li>找到对应http端口：<pre><code>server｛
+     listen   7777 default_server; 
+     #端口对应处
+     listen   [::]7777 default_serve;
+     ....
+     ....
+     root    &quot;/volume1/root/xxxxxx&quot; 
+     #网站对应目录
+     ....
+     ....
+     include /usr/local/etc/nginx/conf.d/xxxxxxxxxxxxxxxxxxxxxxxxxxx/user.conf*
+     #Ngnix配置文件位置（xxxx为随机值）
+</code></pre>
+</li>
+<li>记录 <code>include /usr/local/etc/nginx/conf.d/xxxxxxxxxxxxxxxxxxxxxxxxxxx/user.conf*</code></li>
+<li>创建Ngnix配置文件：<code>cd /usr/local/etc/nginx/conf.d/</code></li>
+<li>查看所有目录：<code>ls</code></li>
+<li>找到对应随机值的目录进入：<code>cd xxxxxxxxxxxxxxxxxxxxxxxxxxx</code> （xxxx为随机值）</li>
+<li>输入 <code>i</code> 编辑，<code>Esc</code>退出编辑，<code>:wq</code> 保存!</li>
+<li>重启web：<code>sudo nginx -s reload</code></li>
 </ol>
-<h3 id="平刷操作">平刷操作</h3>
-<ol>
-<li>ipsw 下载固件命名为 <code>ipsw.ipsw</code></li>
-<li>Cydia 安装 Succession</li>
-<li>打开 Succession，弹窗选择 <code>Not now</code></li>
-<li>爱思或者 Filza 将 ipsw.ipsw 导入到 <code>/var/mobile/Media/Succession</code></li>
-<li>回到 Succession ；点击底部 <code>Download clean filesystem</code></li>
-<li>选择 <code>Use provided IPSW</code>；系统走进度条准备固件</li>
-<li>弹窗提示 Download Complete 选择 <code>Back</code></li>
-<li>再点击底部红色 <code>Prepare for restore!</code>;跳转后点击 <code>Erase iPhone</code> - <code>Begin restore</code></li>
-<li>等待进度条走完重启！</li>
-</ol>
-<blockquote>
-<p>平刷期间注意电量充足，系统自动息屏~尽量不动你的iPhone</p>
-</blockquote>
 </p>
 
      <p class="md_block">
