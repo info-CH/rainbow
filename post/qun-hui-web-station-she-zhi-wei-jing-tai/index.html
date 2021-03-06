@@ -22,7 +22,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1614998560024"/>
+        <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1615027888199"/>
 
           <h1 title="Rainbow" class="weaklink"><a href="/">Rainbow</a>
 
@@ -165,6 +165,8 @@
 <i class="fa fa-bookmark-o"></i>
 <span class="tags_info weaklink">
 	
+	<a href="https://banana7.cn/tag/3WSLxl9LR/" class="tag">黑群晖</a>
+
 
 </span>
 
@@ -194,12 +196,14 @@
      ....
      include /usr/local/etc/nginx/conf.d/xxxxxxxxxxxxxxxxxxxxxxxxxxx/user.conf*
      #Ngnix配置文件位置（xxxx为随机值）
+ }
 </code></pre>
 </li>
 <li>记录 <code>include /usr/local/etc/nginx/conf.d/xxxxxxxxxxxxxxxxxxxxxxxxxxx/user.conf*</code></li>
 <li>创建Ngnix配置文件：<code>cd /usr/local/etc/nginx/conf.d/</code></li>
 <li>查看所有目录：<code>ls</code></li>
-<li>找到对应随机值的目录进入：<code>cd xxxxxxxxxxxxxxxxxxxxxxxxxxx</code> （xxxx为随机值）</li>
+<li>找到对应随机值的目录进入：<code>cd xxxxxxxxxxxxxxxxxxxxxxxxxxx/</code> （xxxx为随机值）</li>
+<li>创建配置文件：<code>sudo vi user.conf.dir</code></li>
 <li>输入 <code>i</code> 编辑，<code>Esc</code>退出编辑，<code>:wq</code> 保存!</li>
 <li>重启web：<code>sudo nginx -s reload</code></li>
 </ol>
