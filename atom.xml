@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://banana7.cn</id>
     <title>Rainbow</title>
-    <updated>2021-03-06T12:36:03.874Z</updated>
+    <updated>2021-03-16T13:31:37.042Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://banana7.cn"/>
     <link rel="self" href="https://banana7.cn/atom.xml"/>
@@ -11,6 +11,24 @@
     <icon>https://banana7.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Rainbow</rights>
     <entry>
+        <title type="html"><![CDATA[Watchtower - 群晖自动更新 Docker 映像与容器]]></title>
+        <id>https://banana7.cn/post/watchtower-qun-hui-zi-dong-geng-xin-docker-ying-xiang-yu-rong-qi/</id>
+        <link href="https://banana7.cn/post/watchtower-qun-hui-zi-dong-geng-xin-docker-ying-xiang-yu-rong-qi/">
+        </link>
+        <updated>2021-03-16T01:29:19.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="部署-watchtower">部署 Watchtower</h3>
+<pre><code>sudo docker run -d \
+--name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --cleanup --run-once
+</code></pre>
+<h3 id="添加任务定时">添加任务定时</h3>
+<p>运行一次，更新所有的容器，并清除旧的容器</p>
+<pre><code>dockerrun -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[群晖 Web Station 设置伪静态]]></title>
         <id>https://banana7.cn/post/qun-hui-web-station-she-zhi-wei-jing-tai/</id>
         <link href="https://banana7.cn/post/qun-hui-web-station-she-zhi-wei-jing-tai/">
@@ -18,7 +36,6 @@
         <updated>2021-03-06T01:57:29.000Z</updated>
         <content type="html"><![CDATA[<h3 id="设置伪静态">设置伪静态</h3>
 <ol>
-<li>ssh 登录群晖</li>
 <li>执行 <code>cat /etc/nginx/app.d/server.webstation-vhost.conf</code></li>
 <li>找到对应http端口：<pre><code>server｛
      listen   7777 default_server; 
@@ -431,65 +448,6 @@ number=null:  =&gt;  电话号码
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OrangePi ZeroPlus烧录Armbian作为软AP]]></title>
-        <id>https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/</id>
-        <link href="https://banana7.cn/post/orangepi-zeroplus-an-zhuang-armbian-xiao-ji/">
-        </link>
-        <updated>2020-09-27T16:20:02.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="前期准备">前期准备</h3>
-<ul>
-<li><a href="https://www.armbian.com/orange-pi-zero-plus/">Armbian官网</a>下载固件</li>
-<li>Etcher烧录</li>
-<li>TF卡</li>
-</ul>
-<h3 id="烧录armbian">烧录armbian</h3>
-<ol>
-<li>下载armbian固件，使用Etcher烧录</li>
-<li>烧录过程：打开Etcher - 选择固件 - 选择TF卡 - 开始烧录</li>
-<li>烧录完成后，先插卡以及网线最后插电；确保Pi能正常引导</li>
-</ol>
-<h3 id="设置armbian">设置armbian</h3>
-<ol>
-<li>进入路由器查看Pi的ip</li>
-<li>ssh连接Pi；初始账号密码：root / 1234</li>
-<li>初次登录会提示更换新密码，以及新建账户/设置时区</li>
-</ol>
-<h3 id="更换国内源">更换国内源</h3>
-<ol>
-<li>root登录<code>sudo -i</code> 输入密码</li>
-<li>更换国内清华源<code>nano /etc/apt/sources.list</code></li>
-<li>把列表里面的deb开头用#注释掉，然后再添加进去以下的清华源地址</li>
-</ol>
-<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
-
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
-
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
-
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
-#deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
-</code></pre>
-<p><img src="https://banana7.cn/post-images/1601257028718.png" alt="" loading="lazy"><br>
-4. <code>Ctrl+O</code> 保存 =&gt; <code>Enter</code> 确认  =&gt;  <code>Ctrl+X</code> 退出<br>
-5. 更新：<code>sudo apt-get update</code> =&gt; <code>sudo apt-get upgrade</code></p>
-<h3 id="设置热点">▎设置热点</h3>
-<ol>
-<li>进入armbian菜单 <code>armbian-config</code></li>
-<li>按键盘上下左右设置；选择<code>Network</code><br>
-<img src="https://banana7.cn/post-images/1602122571235.png" alt="" loading="lazy"></li>
-<li>再选择<code>Hotspot</code>；初次进入走下载进度条；完成后选择<code>eth0</code>；并非wlan0<br>
-<img src="https://banana7.cn/post-images/1602122583960.png" alt="" loading="lazy"></li>
-<li>选择<code>Edit</code> - <code>Basic</code>设置热点昵称以及密码；<br>
-<img src="https://banana7.cn/post-images/1602122624967.png" alt="" loading="lazy"><br>
-<img src="https://banana7.cn/post-images/1602122631482.png" alt="" loading="lazy"></li>
-<li>开启热点后是每次开机自动开启的，不用设置开启自启了</li>
-</ol>
 ]]></content>
     </entry>
 </feed>

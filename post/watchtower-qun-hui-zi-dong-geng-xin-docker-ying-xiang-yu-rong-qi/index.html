@@ -1,12 +1,12 @@
 
 <html>
-<head lang="zh">
+  <head lang="zh">
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
         <meta content="yes" name="apple-mobile-web-app-capable"/>
         <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
-    <title>Rainbow</title>
+    <title>Watchtower - 群晖自动更新 Docker 映像与容器 | Rainbow</title>
 <link href="https://banana7.cn/styles/main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/jquery.js"></script>
 <script type="text/javascript" src="https://banana7.cn/media/scripts/basic.js"></script>
@@ -14,10 +14,12 @@
 </script>
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+
   </head>
 
   <body>
-    <div class="header">
+     <div class="header">
       <div class="logo_title">
 		  
         <div class="title animated fadeInDown"><img src="https://banana7.cn/images/avatar.png?v=1615901451401"/>
@@ -136,36 +138,33 @@
     <div class="main">
       <div class="main-inner">
 
+
 <div class="content">
 
 
 
+  <div class="post_page" >
 
-
-
-  <div class="post_list" >
-
-	
 <div class="post">
-  <div class="post_title weaklink">
-    <h2><a href="https://banana7.cn/post/xiu-fu-win10appxsvczhan-yong-guo-gao-xi-tong-qia-si/" >修复Win10更新2004后“AppxSVC”占用过高</a>
+  <div class="post_title sm_margin">
+    <h2><a>Watchtower - 群晖自动更新 Docker 映像与容器</a>
+
+
+
     </h2>
   </div>
-  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
-  <div class="post_footer">
-    <div class="info weaklink"><i class="fa fa-clock-o"></i>
-<span class="date_info">2020-08-12</span>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info">2021-03-16</span>
+<i class="fa fa-eye"></i>
+
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+
 
 <i class="fa fa-bookmark-o"></i>
-	
 <span class="tags_info weaklink">
 	
-	<a href="https://banana7.cn/tag/iRhkQUyWz/" class="tag">Windows</a>
-
-
-	<a href="https://banana7.cn/tag/Zlrgw2c7jj/" class="tag">经验</a>
-
-
 
 </span>
 
@@ -174,19 +173,35 @@
 
   </div>
 
+
+
+
+
+  <div class="post_content markdown"><p class="md_block">
+    <span class="md_line md_line_start md_line_end"><h3 id="部署-watchtower">部署 Watchtower</h3>
+<pre><code>sudo docker run -d \
+--name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --cleanup --run-once
+</code></pre>
+<h3 id="添加任务定时">添加任务定时</h3>
+<p>运行一次，更新所有的容器，并清除旧的容器</p>
+<pre><code>dockerrun -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once
+</code></pre>
+</p>
+
+     <p class="md_block">
+     </span> </span></div></div>
+</p> 
 </div>
-	
-	
 
-<div class="paginator pager pagination" >
-	
+</div>
 
 
 
-    <div style="clear:both;height:0;"></div>
+<link href="https://banana7.cn/styles/main.css" type="text/css" rel="stylesheet"/>
 
-
-  </div>
+<div class="doc_comments">
 
 </div>
 
@@ -199,9 +214,12 @@
 
       </div>
 
+
+
+
     </div>
 
-    <div class="footer">
+   <div class="footer">
 <link href="https://banana7.cn/styles/main.css" type="text/css" rel="stylesheet"/><div class="site_footer_wrap"><div class="site_footer">
 
       <div class="mysocials"><div class="my_socials">
